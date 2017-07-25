@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.singlescreen.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:id="@+id/relative_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/r"
+                android:layout_alignParentTop="true"
+                android:id="@+id/res_image"
+                android:scaleType="centerCrop"/>
+
+<RelativeLayout
+    android:layout_below="@+id/res_image"
+    android:id="@+id/linear_textview"
+    android:layout_width="wrap_content"
+ android:background="@drawable/log"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/phone_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Phone Number"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+1800 2X0 XX96"
+            android:textSize="24sp"
+            android:id="@+id/phone_first"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+1800 3X5 XX96"
+            android:textSize="24sp"
+            android:id="@+id/phone_second"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_cuisine"
+        android:layout_below="@+id/linear_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuisine"
+            android:layout_marginTop="8dp"
+            android:textSize="30sp"
+            android:id="@+id/opening_textview" />
+
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fast Food, Desserts"
+            android:textSize="24sp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/opening_textview1" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linear_payment"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linear_highlight"
+        android:layout_toRightOf="@+id/linear_cuisine">
+
+        <TextView
+            android:id="@+id/cost_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Payment"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card Only"
+            android:layout_alignEnd="@+id/phone_first"
+            android:textSize="24sp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/cost_text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/linear_cuisine"
+        android:layout_width="wrap_content"
+        android:id="@+id/linear_opening"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opening Hours"
+            android:layout_marginTop="8dp"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 AM to 9 PM(24X7) "
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/linear_payment"
+        android:layout_toRightOf="@+id/linear_opening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:layout_marginTop="8dp"
+            android:textSize="30sp"/>
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A/6 Naini"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_toRightOf="@+id/linear_cuisine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:id="@+id/linear_highlight">
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Highlight"
+            android:layout_marginTop="8dp"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_alignEnd="@+id/cuisine_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desserts"
+            android:layout_marginLeft="10dp"
+            android:textSize="24sp" />
+    </LinearLayout>
+</RelativeLayout>
+            <LinearLayout
+                android:id="@+id/linear_image"
+                android:layout_below="@id/linear_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/image1"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image"/>
+
+                <ImageView
+                    android:layout_width="128dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_button3"
+                android:layout_below="@+id/linear_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/menu_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Show Menu"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:background="#2196F3"/>
+                <Button
+                    android:id="@+id/order_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="Order Food"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:background="#2196F3"/>
+                <Button
+                    android:id="@+id/location_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Get location"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="#FFFFFF"
+                    android:background="#42A5F5"/>
+
+            </LinearLayout>
+
+<LinearLayout
+    android:background="@drawable/log"
+    android:padding="8dp"
+    android:layout_below="@id/linear_button3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_marginLeft="75dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reviews"
+        android:textSize="30sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:textSize="16dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textColor="#78909C"
+        android:padding="8dp"
+        android:layout_marginLeft="75dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/submit_button" />
+    <TextView
+        android:id="@+id/review_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30sp" />
+
+</LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
